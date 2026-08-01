@@ -1,57 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
 }
 
 
 body{
+    background:#f7f3ed;
+    color:#1b1b1b;
+    font-family:"Inter",sans-serif;
+}
 
-background:#f8f5ef;
-color:#111;
 
-font-family:Inter,sans-serif;
+/* NAVBAR */
+
+nav{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+
+padding:35px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:10;
+
+color:white;
+
+}
+
+
+nav h2{
+
+font-family:"Playfair Display",serif;
+
+font-size:32px;
+
+letter-spacing:2px;
 
 }
 
 
 
-h1,h2{
+nav a{
 
-font-family:'Cormorant Garamond',serif;
+color:white;
 
-font-weight:600;
+text-decoration:none;
+
+margin-left:35px;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+opacity:.6;
 
 }
 
 
 
+/* HERO */
 
-.hero{
+header{
 
 height:100vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.25),
-rgba(0,0,0,.35)
+rgba(0,0,0,.35),
+rgba(0,0,0,.45)
 ),
-url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c")
+url("https://images.unsplash.com/photo-1566073771259-6a8506099945")
 center/cover;
 
 
 display:flex;
 
+justify-content:center;
+
 align-items:center;
 
-justify-content:center;
+color:white;
+
+}
+
+
+
+.hero{
 
 text-align:center;
 
-color:white;
+max-width:900px;
 
 }
 
@@ -59,11 +121,15 @@ color:white;
 
 .hero h1{
 
-font-size:120px;
+font-family:"Playfair Display",serif;
 
-letter-spacing:8px;
+font-size:110px;
 
-text-transform:uppercase;
+font-weight:500;
+
+line-height:.95;
+
+letter-spacing:4px;
 
 }
 
@@ -71,28 +137,37 @@ text-transform:uppercase;
 
 .hero p{
 
-font-size:22px;
+margin:35px 0;
+
+font-size:20px;
+
+font-weight:300;
 
 letter-spacing:3px;
-
-margin:30px;
 
 }
 
 
 
-
 .btn{
 
-border:1px solid white;
+display:inline-block;
 
-padding:18px 50px;
+padding:18px 45px;
+
+border:1px solid white;
 
 color:white;
 
 text-decoration:none;
 
-transition:.5s;
+text-transform:uppercase;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+transition:.4s;
 
 }
 
@@ -102,81 +177,30 @@ transition:.5s;
 
 background:white;
 
-color:black;
+color:#111;
 
 }
 
 
 
+/* SEZIONI */
 
+section{
 
-.section{
-
-padding:140px 12%;
-
-}
-
-
-
-
-
-.big-text{
-
-font-size:55px;
-
-max-width:900px;
-
-line-height:1.1;
+padding:120px 9%;
 
 }
 
 
+.title{
 
+font-family:"Playfair Display",serif;
 
+font-size:60px;
 
-.room{
+font-weight:500;
 
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-align-items:center;
-
-gap:80px;
-
-}
-
-
-
-.room img{
-
-width:100%;
-
-height:700px;
-
-object-fit:cover;
-
-}
-
-
-
-
-
-.room h2{
-
-font-size:70px;
-
-}
-
-
-
-
-
-.experiences{
-
-display:flex;
-
-justify-content:space-around;
+margin-bottom:60px;
 
 text-align:center;
 
@@ -184,11 +208,28 @@ text-align:center;
 
 
 
-.experiences h3{
+/* INTRO */
 
-font-family:'Cormorant Garamond';
 
-font-size:45px;
+.intro{
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+
+
+.intro p{
+
+font-size:22px;
+
+line-height:1.8;
+
+font-weight:300;
 
 }
 
@@ -196,9 +237,96 @@ font-size:45px;
 
 
 
-.booking{
+/* CAMERE */
 
-height:500px;
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+overflow:hidden;
+
+}
+
+
+
+.card img{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+transition:.7s;
+
+}
+
+
+
+.card:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+
+.card h3{
+
+font-family:"Playfair Display",serif;
+
+font-size:35px;
+
+padding:25px 30px 10px;
+
+}
+
+
+
+.card p{
+
+padding:0 30px 35px;
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+/* SERVIZI */
+
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+
+.services div{
+
+height:180px;
 
 background:#111;
 
@@ -212,21 +340,172 @@ align-items:center;
 
 text-align:center;
 
+font-family:"Playfair Display",serif;
+
+font-size:30px;
+
+transition:.4s;
+
 }
 
+
+
+.services div:hover{
+
+transform:translateY(-10px);
+
+background:#b59663;
+
+}
+
+
+
+
+
+/* GALLERIA */
+
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:20px;
+
+}
+
+
+.gallery img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+}
+
+
+
+
+
+/* RECENSIONI */
+
+
+.review{
+
+background:white;
+
+padding:45px;
+
+max-width:700px;
+
+margin:25px auto;
+
+text-align:center;
+
+}
+
+
+
+.review p{
+
+font-family:"Playfair Display",serif;
+
+font-size:28px;
+
+}
+
+
+
+
+
+/* BOOKING */
+
+
+.booking{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+}
 
 
 .booking h2{
 
-font-size:80px;
+font-family:"Playfair Display",serif;
+
+font-size:70px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.booking .btn{
+
+border-color:#b59663;
+
+}
+
+
+
+.booking .btn:hover{
+
+background:#b59663;
+
+color:white;
 
 }
 
 
 
 
+/* WHATSAPP */
 
-@media(max-width:800px){
+
+.whatsapp{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+background:#25d366;
+
+color:white;
+
+padding:18px 25px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:600;
+
+z-index:20;
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+nav div{
+
+display:none;
+
+}
 
 
 .hero h1{
@@ -236,19 +515,43 @@ font-size:60px;
 }
 
 
-.room{
+.title{
+
+font-size:42px;
+
+}
+
+
+
+.cards{
 
 grid-template-columns:1fr;
 
 }
 
 
-.experiences{
 
-flex-direction:column;
+.services{
 
-gap:50px;
+grid-template-columns:1fr 1fr;
 
 }
+
+
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.booking h2{
+
+font-size:45px;
+
+}
+
 
 }
